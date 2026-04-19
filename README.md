@@ -1,6 +1,6 @@
 # ⛅ Aether Weather Dashboard
 
-A full-stack weather web application with a complete **CI/CD DevOps pipeline** — automatically built, tested, containerized, and deployed to the cloud on every code push.
+A full-stack weather web application with a complete **CI/CD DevOps pipeline**  automatically built, tested, containerized, and deployed to the cloud on every code push.
 
 ---
 
@@ -8,7 +8,7 @@ A full-stack weather web application with a complete **CI/CD DevOps pipeline** �
 
 **👉 [https://weather-dashboard-devops.onrender.com](https://weather-dashboard-devops.onrender.com)**
 
-> Free tier may take 30–60 seconds to wake up after inactivity.
+> Free tier may take 30-60 seconds to wake up after inactivity.
 
 ---
 
@@ -18,7 +18,7 @@ A full-stack weather web application with a complete **CI/CD DevOps pipeline** �
 Push Code → GitHub → Webhook → Jenkins → Build → ESLint → Jest → Docker → Render → LIVE
 ```
 
-Every push to `main` triggers the entire pipeline **automatically** — no manual steps.
+Every push to `main` triggers the entire pipeline **automatically**  no manual steps.
 
 ---
 
