@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather Dashboard</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px;
+           margin: 50px auto; background: #f0f4f8; }
+    h1 { color: #1F4E79; }
+    input { padding: 10px; width: 300px; border-radius: 4px; border: 1px solid #ccc; }
+    button { padding: 10px 20px; background: #1F4E79; color: white;
+             border: none; border-radius: 4px; cursor: pointer; }
+    #result { margin-top: 20px; padding: 20px; background: white;
+              border-radius: 8px; display: none; }
+  </style>
+</head>
+<body>
+  <h1>Weather Dashboard</h1>
+  <p>DevOps Mini Project — Cummins College</p>
+  <input type='text' id='city' placeholder='Enter city name (e.g. Pune)'>
+  <button onclick='getWeather()'>Get Weather</button>
+  <div id='result'>
+    <h2 id='cityName'></h2>
+    <p>Temperature: <strong id='temp'></strong></p>
+    <p>Humidity: <strong id='humidity'></strong></p>
+    <p>Condition: <strong id='condition'></strong></p>
+  </div>
+  <script>
+    function getWeather() {
+      const city = document.getElementById('city').value || 'Pune';
+      fetch('/api/weather?city=' + city)
+        .then(r => r.json())
+        .then(data => {
+          document.getElementById('cityName').textContent = data.city;
+          document.getElementById('temp').textContent = data.temperature;
+          document.getElementById('humidity').textContent = data.humidity;
+          document.getElementById('condition').textContent = data.condition;
+          document.getElementById('result').style.display = 'block';
+        });
+    }
+  </script>
+</body>
+</html>
