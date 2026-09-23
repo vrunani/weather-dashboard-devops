@@ -1,14 +1,37 @@
-# ⛅ Aether Weather Dashboard
+# ⛅ NOVA — Atmospheric Data System
 
-A full-stack weather web application with a complete **CI/CD DevOps pipeline**  automatically built, tested, containerized, and deployed to the cloud on every code push.
+A full-stack weather dashboard with a complete **CI/CD DevOps pipeline**.
+Built, tested, containerized, and deployed automatically on every push.
 
 ---
 
 ## 🌐 Live Demo
 
-**👉 [https://weather-dashboard-devops.onrender.com](https://weather-dashboard-devops.onrender.com)**
+**👉 [https://weather-dashboard-devops-igew.onrender.com/](https://weather-dashboard-devops-igew.onrender.com/)**
 
-> Free tier may take 30-60 seconds to wake up after inactivity.
+> Free tier may take 30-60 seconds to wake up.
+
+---
+
+## 🖥️ Interface
+
+- Terminal-style header: `NOVA / ATMOSPHERIC DATA SYSTEM`
+- Live clock display (e.g. `08:11:08`)
+- City search via `$ city` command input
+- `Run →` button to fetch data
+
+### Data Shown
+
+- Location + local time (e.g. `Pune, IN / 01:38 pm`)
+- Condition label (e.g. `LIGHT DRIZZLE`)
+- Temperature, feels-like, daily high/low
+- Wind speed, direction, degrees
+- Humidity %
+- Pressure (hPa)
+- Visibility (km)
+- Wind speed (m/s)
+- Sunrise time
+- Sunset time
 
 ---
 
@@ -18,7 +41,8 @@ A full-stack weather web application with a complete **CI/CD DevOps pipeline**  
 Push Code → GitHub → Webhook → Jenkins → Build → ESLint → Jest → Docker → Render → LIVE
 ```
 
-Every push to `main` triggers the entire pipeline **automatically**  no manual steps.
+- Every push to `main` runs the full pipeline.
+- No manual steps needed.
 
 ---
 
@@ -43,14 +67,14 @@ Every push to `main` triggers the entire pipeline **automatically**  no manual s
 weather-dashboard-devops/
 ├── server.js              # Express backend — 3 API endpoints
 ├── package.json           # Dependencies and npm scripts
-├── Jenkinsfile            # CI/CD pipeline — 6 stages
-├── Dockerfile             # Container build instructions
+├── Jenkinsfile             # CI/CD pipeline — 6 stages
+├── Dockerfile              # Container build instructions
 ├── .dockerignore
 ├── .eslintrc.json
 ├── public/
-│   └── index.html         # Aether Weather frontend UI
+│   └── index.html          # NOVA frontend UI
 └── __tests__/
-    └── app.test.js        # Jest test cases
+    └── app.test.js          # Jest test cases
 ```
 
 ---
